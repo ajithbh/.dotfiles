@@ -11,33 +11,7 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias tree='tree -A'
-alias LS='ls'
-alias sa='svn add'
-alias sr='svn revert --depth=infinity'
-alias sd='svn diff --diff-cmd=meld'
-alias sup='svn update'
-alias sst='svn st -qu'
-alias sll='svn log -l'
-alias sco='svn co'
-alias sci='svn ci -m'
-alias si='svn info'
-alias ssx='svn propset svn:executable on'
-alias sdx='svn propdel svn:executable'
-alias search='aptitude search'
-alias apt-install='sudo apt-get install'
-alias e='gvim'
-alias ea='gvim ~/.bash_aliases'
-alias ez='gvim ~/.zshrc'
-alias es='gvim -S'
-alias xo='xdg-open'
-alias mx='chmod +x'
-alias cls='for i in `seq 30`; do echo -e "\n"; done'
-
-alias -s c=gvim
-alias -s cpp=gvim
-alias -s log=gvim
-alias -s pdf=xo
+source $HOME/.zsh_aliases
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
