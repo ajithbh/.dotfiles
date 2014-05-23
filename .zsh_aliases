@@ -3,6 +3,7 @@ alias LS='ls'
 alias sa='svn add'
 alias sr='svn revert --depth=infinity'
 alias sd='svn diff --diff-cmd=meld'
+alias se='svn export'
 alias sup='svn update'
 alias sst='svn st -qu'
 alias sll='svn log -l'
@@ -22,7 +23,9 @@ alias res='[ -e Session.vim ] && gvim -S Session.vim || print "No session to res
 alias xo='xdg-open'
 alias mx='chmod +x'
 alias cls='for i in `seq 30`; do echo -e "\n"; done'
+alias gmeld='git difftool --tool=meld -y'
 
+alias b='bash -c'
 
 alias -s c=gvim
 alias -s cpp=gvim
