@@ -50,7 +50,7 @@ source $HOME/.zsh_aliases
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git svn-fast-info virtualenv virtualenvwrapper command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,3 +76,7 @@ export PATH="/home/ajith/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export MINICOM="-m -c on"
+
+gred() {
+    echo "$1" | awk ' BEGIN { FS=":" } { printf("%s +%s\n", $1, $2) }' | xargs gvim
+}
