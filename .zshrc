@@ -86,3 +86,11 @@ export MINICOM="-m -c on"
 gred() {
     echo "$1" | awk ' BEGIN { FS=":" } { printf("%s +%s\n", $1, $2) }' | xargs gvim
 }
+
+h2d() {
+  echo "ibase=16; $@" | bc
+}
+
+d2h() {
+  echo "obase=16; $@" | bc
+}
